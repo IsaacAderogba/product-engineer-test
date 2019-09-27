@@ -1,0 +1,1 @@
+export const tablet = '767px';
