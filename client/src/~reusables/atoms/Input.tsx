@@ -14,13 +14,14 @@ export interface InputProps {
   mb?: string;
   hover?: string;
   margin?: string;
+  color?: string;
 }
 
 export const Input = styled("input")<InputProps>`
   font-size: ${body_1};
   box-shadow: 0 0.8rem 2.5rem 0 rgba(40, 51, 63, 0.05);
   transition: all 100ms ease-in-out;
-  height: 36px;
+  height: 40px;
   width: 95%;
   max-width: 364px;
   background-color: ${(props: any) =>
@@ -29,6 +30,7 @@ export const Input = styled("input")<InputProps>`
   margin-bottom: ${props => (props.margin ? props.margin : medium_space_1)};
   color: ${text};
   font-weight: 500;
+  border: 0;
   border-radius: 4px;
   box-shadow: ${props =>
     props.hover ? "0px 2px 6px rgba(0, 0, 0, 0.11);" : "0 0 0 0"};
@@ -39,15 +41,15 @@ export const Input = styled("input")<InputProps>`
   }
 
   ::placeholder {
-    color: ${text}
+    color: ${props => (props.color ? props.color : text)};
     opacity: 1;
   }
 
   :-ms-input-placeholder {
-    color: ${text}
+    color: ${props => (props.color ? props.color : text)};
   }
 
   ::-ms-input-placeholder {
-    color: ${text}
+    color: ${props => (props.color ? props.color : text)};
   }
 `;
