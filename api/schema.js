@@ -14,7 +14,7 @@ const CipherType = new GraphQLObjectType({
 });
 
 const RootQuery = new GraphQLObjectType({
-  name: "Query",
+  name: "RootQuery",
   fields: {
     cipher: {
       type: CipherType,
