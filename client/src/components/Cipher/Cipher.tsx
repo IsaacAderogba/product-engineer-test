@@ -14,10 +14,12 @@ import { primaryGradient } from "../../~reusables/variables/colors";
 const Cipher = () => {
   return (
     <StyledCipher>
-      <CipherHeader />
-      <CipherInput />
-      <DecodedCipher />
-      <CipherFooter />
+      <div>
+        <CipherHeader />
+        <CipherInput />
+        <DecodedCipher />
+        <CipherFooter />
+      </div>
     </StyledCipher>
   );
 };
@@ -26,6 +28,10 @@ const StyledCipher = styled.section`
   min-height: 100vh;
   min-width: 100vw;
   background: ${primaryGradient};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default Cipher;

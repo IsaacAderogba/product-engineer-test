@@ -31,7 +31,7 @@ const StyledCHeader = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: ${medium_space_2} 0;
+  padding: 0 0 ${medium_space_2} 0;
   
   .title {
     display: flex;

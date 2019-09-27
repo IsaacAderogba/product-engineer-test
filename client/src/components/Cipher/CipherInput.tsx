@@ -1,10 +1,11 @@
 // modules
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
 
 const CipherInput = () => {
-  return (
-    <div></div>
-  )
-}
+  return <StyledCInput></StyledCInput>;
+};
 
-export default CipherInput
+const StyledCInput = styled.section``;
+
+export default CipherInput;
