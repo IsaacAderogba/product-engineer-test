@@ -19,3 +19,4 @@ const subCipher = cipher => {
 module.exports = {
   subCipher
 };
+

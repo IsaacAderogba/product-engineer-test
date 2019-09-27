@@ -6,3 +6,4 @@ express
 express-graphql
 graphql
 jest
+concurrently
