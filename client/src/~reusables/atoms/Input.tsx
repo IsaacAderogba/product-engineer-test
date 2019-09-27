@@ -29,15 +29,16 @@ export const Input = styled("input")<InputProps>`
   padding-left: ${small_space};
   margin-bottom: ${props => (props.margin ? props.margin : medium_space_1)};
   color: ${text};
+  text-align: center;
   font-weight: 500;
   border: 0;
   border-radius: 4px;
+  color: ${props => (props.color ? props.color : text)};
   box-shadow: ${props =>
     props.hover ? "0px 2px 6px rgba(0, 0, 0, 0.11);" : "0 0 0 0"};
 
   &:focus {
-    border: 1px solid ${offWhite};
-    outline: 0 none;
+    outline: 0;
   }
 
   ::placeholder {
