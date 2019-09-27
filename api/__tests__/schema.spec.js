@@ -14,4 +14,19 @@ describe("substitution cipher query", () => {
     const { data } = await graphql(graphqlSchema, query);
     expect(data.cipher.decodedCipher).toEqual("HELLO WORLD");
   });
+
+  it("Returns error message if cipher input invalid", async () => {
+    const query = `
+      query {
+        cipher(cipher: "4374 243 14 20 5 59049 8 1 & A") {
+          decodedCipher     
+        }
+      }
+    `;
+
+    const { errors } = await graphql(graphqlSchema, query);
+    expect(errors[0].message).toEqual(
+      "Text must contain numbers seperated by spaces"
+    );
+  });
 });
