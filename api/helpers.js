@@ -12,3 +12,7 @@ const subCipher = cipher => {
     })
     .join("");
 };
+
+module.exports = {
+  subCipher
+}
