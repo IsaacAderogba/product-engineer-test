@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // styles
-import { text, titles } from "../variables/colors";
+import { text, titles, secondary } from "../variables/colors";
 import {
   body_1,
   body_2,
@@ -119,4 +119,8 @@ export const H6 = styled("h6")<TextProps>`
   margin-right: ${(props: TextProps) => (props.mr ? props.mr : 0)};
   text-align: ${(props: TextProps) => (props.align ? props.align : "left")};
   letter-spacing: 0.05em;
+`;
+
+export const A = styled("a")<TextProps>`
+  color: ${(props: TextProps) => (props.color ? props.color : secondary)};
 `;
