@@ -1,15 +1,11 @@
 // modules
 import React from "react";
 
-// components/functions
+// components
 import Cipher from "./Cipher/Cipher";
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <Cipher />
-    </div>
-  );
+  return <Cipher />;
 };
 
 export default App;

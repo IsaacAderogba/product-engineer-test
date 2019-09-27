@@ -1,10 +1,10 @@
 // modules
 import React from 'react';
 
-const CipherInput = () => {
+const CipherHeader = () => {
   return (
     <div></div>
   )
 }
 
-export default CipherInput
+export default CipherHeader

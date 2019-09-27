@@ -3,7 +3,7 @@ import React from 'react';
 
 const DecodedCipher = () => {
   return (
-    <div>DecodedCipher component</div>
+    <div></div>
   )
 }
 
