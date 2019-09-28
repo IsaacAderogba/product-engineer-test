@@ -1,5 +1,5 @@
 // modules
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useLazyQuery } from "@apollo/react-hooks";
 
@@ -16,12 +16,15 @@ import { tablet } from "../../~reusables/variables/media-queries";
 import { small_space } from "../../~reusables/variables/spacing";
 
 const Cipher = () => {
-  const priorInput = JSON.parse(String(localStorage.getItem("cipherInput")));
-
-  const [cipherInput, setCipherInput] = useState(priorInput ? priorInput : "");
+  const [cipherInput, setCipherInput] = useState("");
   const [decodeCipher, { loading, data, error }] = useLazyQuery<CipherType>(
     decodeCipherQuery
   );
+
+  useEffect(() => {
+    const priorInput = JSON.parse(String(localStorage.getItem("cipherInput")));
+    setCipherInput(priorInput ? priorInput : "");
+  }, []);
 
   const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

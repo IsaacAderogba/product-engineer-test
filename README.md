@@ -1,11 +1,12 @@
 # Plural AI Decoder
 
-This project was created as part of a Plural AI Technical Test. It has taken roughly 5 hours in total, with time allocation as follows:
+This project was created as part of a Plural AI Technical Test. It has taken roughly 5 hours and 20 minutes in total, with time allocation as follows:
 
 - One hour on the backend
 - 30 minutes on creating a Figma mockup
 - Three hours on the frontend
 - 30 minutes on creating documentation
+- 20 minutes of refactoring
 
 This is a single-page web application that decodes numeric substitution ciphers into their original output.
 

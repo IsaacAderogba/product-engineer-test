@@ -3,11 +3,11 @@ import React from "react";
 import styled from "styled-components";
 
 // components
-import { P2, A } from "../../~reusables/atoms/Text";
+import { P2 } from "../../~reusables/atoms/Text";
+import FooterItem from "../../~reusables/elements/FooterItem";
 
 // styles
 import { offWhite } from "../../~reusables/variables/colors";
-import { xs_space } from "../../~reusables/variables/spacing";
 
 const CipherFooter = () => {
   return (
@@ -23,14 +23,16 @@ const CipherFooter = () => {
         </span>
         by Isaac. I also made:
       </P2>
-      <P2 mb={xs_space} color={offWhite}>
-        <A href="https://www.getconduit.co">Conduit</A> - Product management
-        system
-      </P2>
-      <P2 color={offWhite}>
-        <A href="https://getpluto.netlify.com/">Pluto</A> - Quiz management
-        platform
-      </P2>
+      <FooterItem
+        title="Conduit"
+        link="https://www.getconduit.co"
+        text="Product management system"
+      />
+      <FooterItem
+        title="Pluto"
+        link="https://getpluto.netlify.com"
+        text="Quiz management platform"
+      />
     </StyledCFooter>
   );
 };
