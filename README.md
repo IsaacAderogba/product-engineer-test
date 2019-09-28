@@ -66,10 +66,23 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 From root folder
 
-    $ npm run start // starts index.js using node command - for heroku
-    $ npm run server // starts index.js using nodemon as a file watcher
-    $ npm run client // starts react client app
-    $ npm run test-server // tests server in interactive mode
-    $ npm run test-client // tests client in interactive mode
-    $ npm run test // tests server and client using concurrently
-    $ npm run dev // starts server and client using concurrently
+    Starts index.js using node command - for heroku
+    $ npm run start 
+
+    Starts index.js using nodemon as a file watcher
+    $ npm run server 
+
+    Starts react client app
+    $ npm run client
+
+    Tests server in interactive mode
+    $ npm run test-server
+
+    Tests clients in interactive mode
+    $ npm run test-client
+
+    Tests server and client using concurrently
+    $ npm run test 
+
+    Starts server and client using concurrently
+    $ npm run dev 
