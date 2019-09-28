@@ -35,22 +35,25 @@ For development, you will need Node.js and npm installed on your environment.
 
 ### Installing
 
-    $ Clone/fork this project from https://github.com/IsaacAderogba/product-engineer-test.git
-    $ npm install server side libraries (from root folder)
-    $ cd to client and npm install client side libraries
+    $ git clone https://github.com/IsaacAderogba/product-engineer-test.git
+    $ cd product-engineer-test
+    $ npm install
+    $ cd client
+    $ npm install
 
 ### Starting Development Server
 
+Execute command from root folder. Starts both the server and the client in development mode.
+
     $ npm run dev
 
-Execute command from root folder. Starts both the server and the client in development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. Server is at [http://localhost:5000](http://localhost:5000)
 
 ### Running the tests
 
-    $ npm run test
-
 Execute command from root folder. Runs testing for both the server and the client
+
+    $ npm run test
 
 ### Deployment / Build For Production
 
