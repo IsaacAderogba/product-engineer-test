@@ -10,7 +10,7 @@ import { H1, P1 } from "../../~reusables/atoms/Text";
 import { offWhite } from "../../~reusables/variables/colors";
 import { xs_space, small_space } from "../../~reusables/variables/spacing";
 import { tablet } from "../../~reusables/variables/media-queries";
-import { heading_3, heading_2 } from "../../~reusables/variables/font-sizes";
+import { heading_2 } from "../../~reusables/variables/font-sizes";
 
 const CipherHeader = () => {
   return (

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // styles
 import { small_space, medium_space_1 } from "../variables/spacing";
-import { text, offWhite } from "../variables/colors";
+import { text } from "../variables/colors";
 import { body_1 } from "../variables/font-sizes";
 
 export interface InputProps {
