@@ -4,10 +4,10 @@ import styled from "styled-components";
 
 // components
 import { P2 } from "../../~reusables/atoms/Text";
+import FooterItem from "../../~reusables/elements/FooterItem";
 
 // styles
 import { offWhite } from "../../~reusables/variables/colors";
-import FooterItems from "../../~reusables/elements/FooterItems";
 
 const CipherFooter = () => {
   return (
@@ -23,12 +23,12 @@ const CipherFooter = () => {
         </span>
         by Isaac. I also made:
       </P2>
-      <FooterItems
+      <FooterItem
         title="Conduit"
         link="https://www.getconduit.co"
         text="Product management system"
       />
-      <FooterItems
+      <FooterItem
         title="Pluto"
         link="https://getpluto.netlify.com"
         text="Quiz management platform"

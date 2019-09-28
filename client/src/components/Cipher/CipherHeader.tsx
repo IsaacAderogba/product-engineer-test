@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 
 // components
-import pluralAILogo from "../../~reusables/assets/pluralai-logo.png";
 import { P1 } from "../../~reusables/atoms/Text";
 import PluralLogoText from "../../~reusables/molecules/PluralLogoText";
 

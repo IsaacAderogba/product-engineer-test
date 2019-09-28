@@ -14,7 +14,7 @@ interface OwnProps {
   link: string;
 }
 
-const FooterItems = ({ title, link, text }: OwnProps) => {
+const FooterItem = ({ title, link, text }: OwnProps) => {
   return (
     <P2 mb={xs_space} color={offWhite}>
       <A href={link}>{title}</A> - {text}
@@ -22,4 +22,4 @@ const FooterItems = ({ title, link, text }: OwnProps) => {
   );
 };
 
-export default FooterItems;
+export default FooterItem;
