@@ -8,14 +8,14 @@ import CipherInput from "./CipherInput";
 import DecodedCipher from "./DecodedCipher";
 import CipherHeader from "./CipherHeader";
 import CipherFooter from "./CipherFooter";
-import { decodeCipherQuery, Cipher } from "../../queries/cipher";
+import { decodeCipherQuery, CipherType } from "../../queries/cipher";
 
 // styles
 import { primaryGradient } from "../../~reusables/variables/colors";
 
 const Cipher = () => {
   const [cipherInput, setCipherInput] = useState("");
-  const [decodeCipher, { loading, data, error }] = useLazyQuery<Cipher>(decodeCipherQuery);
+  const [decodeCipher, { loading, data, error }] = useLazyQuery<CipherType>(decodeCipherQuery);
 
   const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

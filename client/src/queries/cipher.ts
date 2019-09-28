@@ -1,6 +1,6 @@
 import { gql } from "apollo-boost";
 
-export interface Cipher {
+export interface CipherType {
   decodedCipher: string;
 }
 
