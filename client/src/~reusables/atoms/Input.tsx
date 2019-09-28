@@ -23,7 +23,7 @@ export const Input = styled("input")<InputProps>`
   transition: all 100ms ease-in-out;
   height: 40px;
   width: 95%;
-  max-width: 364px;
+  min-width: 364px;
   background-color: ${(props: any) =>
     props.background ? props.background : "transparent"};
   padding-left: ${small_space};

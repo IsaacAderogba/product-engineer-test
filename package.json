@@ -19,6 +19,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "./public",
+      "./client"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/IsaacAderogba/product-engineer-test/issues"
   },

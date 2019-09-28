@@ -27,10 +27,6 @@ const StyledCInput = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: ${medium_space_1};
-
-  button {
-    width: 95%;
-  }
 `;
 
 export default CipherInput;

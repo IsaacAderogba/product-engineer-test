@@ -16,19 +16,20 @@ const Cipher = () => {
     <StyledCipher>
       <div>
         <CipherHeader />
-        <CipherInput />
-        <DecodedCipher />
+        <form>
+          <CipherInput />
+          <DecodedCipher />
+        </form>
         <CipherFooter />
       </div>
     </StyledCipher>
   );
 };
 
-const StyledCipher = styled.section`
+const StyledCipher = styled.main`
   min-height: 100vh;
   min-width: 100vw;
   background: ${primaryGradient};
-
   display: flex;
   justify-content: center;
   align-items: center;

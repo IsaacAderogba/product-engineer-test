@@ -21,7 +21,7 @@ const CipherFooter = () => {
         <span role="img" aria-label="rockstar sign">
           🤘🏼️
         </span>
-        by Isaac. He also made:
+        by Isaac. I also made:
       </P2>
       <P2 mb={xs_space} color={offWhite}>
         <A href="https://www.getconduit.co">Conduit</A> - Product management
