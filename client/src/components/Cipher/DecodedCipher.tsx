@@ -22,17 +22,26 @@ interface OwnProps {
 }
 
 const DecodedCipher = (props: OwnProps) => {
-  const { data, error, loading } = props;
+  let { data, error, loading } = props;
+
+  if (data) {
+    localStorage.setItem('cipher', JSON.stringify(data))
+  } else {
+    data = JSON.parse(String(localStorage.getItem('cipher')));
+  }
 
   let value = { color: offWhite, text: "" };
   if (data) value = { color: success, text: data.cipher.decodedCipher };
   if (error) value = { color: errorCol, text: error.graphQLErrors[0].message };
   if (loading) value = { color: offWhite, text: "Loading..." };
 
+  if (error) localStorage.removeItem('cipher');
+
   return (
     <StyledDCipher>
       <Input
-        defaultValue={value.text}
+        readOnly
+        value={value.text}
         placeholder="Decoded output"
         background="rgba(247, 248, 248, 0.3)"
         color={value.color}
