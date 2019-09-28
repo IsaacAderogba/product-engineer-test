@@ -22,8 +22,6 @@ export const Input = styled("input")<InputProps>`
   box-shadow: 0 0.8rem 2.5rem 0 rgba(40, 51, 63, 0.05);
   transition: all 100ms ease-in-out;
   height: 40px;
-  width: 95%;
-  min-width: 364px;
   background-color: ${(props: any) =>
     props.background ? props.background : "transparent"};
   padding-left: ${small_space};

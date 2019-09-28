@@ -12,6 +12,8 @@ import { decodeCipherQuery, CipherType } from "../../queries/cipher";
 
 // styles
 import { primaryGradient } from "../../~reusables/variables/colors";
+import { tablet } from "../../~reusables/variables/media-queries";
+import { small_space } from "../../~reusables/variables/spacing";
 
 const Cipher = () => {
   const priorInput = JSON.parse(String(localStorage.getItem("cipherInput")));
@@ -51,6 +53,10 @@ const StyledCipher = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: ${tablet}) {
+    padding: ${small_space};
+  }
 `;
 
 export default Cipher;

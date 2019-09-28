@@ -36,6 +36,8 @@ const DecodedCipher = (props: DecodedCipherProps) => {
 
 const StyledDCipher = styled.section`
   margin-bottom: ${medium_space_1};
+  display: flex;
+  flex-direction: column;
 `;
 
 export default DecodedCipher;

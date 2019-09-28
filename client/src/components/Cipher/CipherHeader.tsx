@@ -8,7 +8,9 @@ import { H1, P1 } from "../../~reusables/atoms/Text";
 
 // styles
 import { offWhite } from "../../~reusables/variables/colors";
-import { xs_space, medium_space_2, small_space } from "../../~reusables/variables/spacing";
+import { xs_space, small_space } from "../../~reusables/variables/spacing";
+import { tablet } from "../../~reusables/variables/media-queries";
+import { heading_3, heading_2 } from "../../~reusables/variables/font-sizes";
 
 const CipherHeader = () => {
   return (
@@ -21,7 +23,9 @@ const CipherHeader = () => {
           Plural AI Decoder
         </H1>
       </div>
-      <P1 mt={small_space} color={offWhite}>Input your code and we'll handle the rest</P1>
+      <P1 mt={small_space} align="center" color={offWhite}>
+        Input your code and we'll handle the rest
+      </P1>
     </StyledCHeader>
   );
 };
@@ -33,11 +37,11 @@ const StyledCHeader = styled.header`
   align-items: center;
   padding: 0 0 ${small_space} 0;
 
-  
   .title {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     & > div {
       height: 32px;
@@ -52,6 +56,14 @@ const StyledCHeader = styled.header`
 
     h1 {
       margin-left: ${xs_space};
+    }
+  }
+
+  @media only screen and (max-width: ${tablet}) {
+    padding: ${small_space};
+
+    h1 {
+      font-size: ${heading_2};
     }
   }
 `;
