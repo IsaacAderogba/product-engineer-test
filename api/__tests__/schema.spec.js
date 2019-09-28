@@ -26,7 +26,7 @@ describe("substitution cipher query", () => {
 
     const { errors } = await graphql(graphqlSchema, query);
     expect(errors[0].message).toEqual(
-      "Text must contain numbers seperated by spaces"
+      "Requires numbers seperated by spaces"
     );
   });
 });

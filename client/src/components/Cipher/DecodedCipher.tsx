@@ -8,24 +8,34 @@ import { Input } from "../../~reusables/atoms/Input";
 import { CipherType } from "../../queries/cipher";
 
 // styles
-import { offWhite } from "../../~reusables/variables/colors";
+import {
+  offWhite,
+  success,
+  error as errorCol
+} from "../../~reusables/variables/colors";
 import { medium_space_1 } from "../../~reusables/variables/spacing";
 
 interface OwnProps {
-  data: CipherType | undefined,
-  error: ApolloError | undefined,
-  loading: boolean
+  data: CipherType | undefined;
+  error: ApolloError | undefined;
+  loading: boolean;
 }
 
 const DecodedCipher = (props: OwnProps) => {
-  const{ data, error, loading } = props;
-  console.log(data, error, loading)
+  const { data, error, loading } = props;
+
+  let value = { color: offWhite, text: "" };
+  if (data) value = { color: success, text: data.cipher.decodedCipher };
+  if (error) value = { color: errorCol, text: error.graphQLErrors[0].message };
+  if (loading) value = { color: offWhite, text: "Loading..." };
+
   return (
     <StyledDCipher>
       <Input
+        defaultValue={value.text}
         placeholder="Decoded output"
         background="rgba(247, 248, 248, 0.3)"
-        color={offWhite}
+        color={value.color}
       />
     </StyledDCipher>
   );

@@ -17,7 +17,7 @@ describe("subCipher function", () => {
       subCipher("4374 243 14 20 5 59049 8 1 & A");
     } catch (err) {
       expect(err.message).toEqual(
-        "Text must contain numbers seperated by spaces"
+        "Requires numbers seperated by spaces"
       );
     }
   });

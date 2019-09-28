@@ -1,6 +1,6 @@
 const subCipher = cipher => {
   if (!/^[0-9 ]+$/.test(cipher))
-    throw new Error("Text must contain numbers seperated by spaces");
+    throw new Error("Requires numbers seperated by spaces");
 
   return cipher
     .trim()

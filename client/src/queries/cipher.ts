@@ -1,7 +1,9 @@
 import { gql } from "apollo-boost";
 
 export interface CipherType {
-  decodedCipher: string;
+  cipher: {
+    decodedCipher: string;
+  };
 }
 
 export const decodeCipherQuery = gql`
