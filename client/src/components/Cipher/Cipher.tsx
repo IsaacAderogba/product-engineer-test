@@ -8,18 +8,18 @@ import CipherInput from "./CipherInput";
 import DecodedCipher from "./DecodedCipher";
 import CipherHeader from "./CipherHeader";
 import CipherFooter from "./CipherFooter";
-import { decodeCipherQuery } from "../../queries/cipher";
+import { decodeCipherQuery, Cipher } from "../../queries/cipher";
 
 // styles
 import { primaryGradient } from "../../~reusables/variables/colors";
 
 const Cipher = () => {
   const [cipherInput, setCipherInput] = useState("");
-  const [decodeCipher, { loading, data }] = useLazyQuery(decodeCipherQuery);
+  const [decodeCipher, { loading, data, error }] = useLazyQuery<Cipher>(decodeCipherQuery);
 
   const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(cipherInput)
+    decodeCipher({ variables: { cipher: cipherInput } });
   };
 
   return (
@@ -27,8 +27,11 @@ const Cipher = () => {
       <div>
         <CipherHeader />
         <form onSubmit={onSubmitForm}>
-          <CipherInput cipherInput={cipherInput} setCipherInput={setCipherInput} />
-          <DecodedCipher />
+          <CipherInput
+            cipherInput={cipherInput}
+            setCipherInput={setCipherInput}
+          />
+          <DecodedCipher loading={loading} data={data} error={error} />
         </form>
         <CipherFooter />
       </div>
