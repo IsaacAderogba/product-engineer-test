@@ -1,0 +1,46 @@
+{
+  "name": "product-engineer-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "test-server": "jest --watch",
+    "test-client": "npm test --prefix client",
+    "test": "concurrently \"npm run test-server\" \"npm run test-client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaacAderogba/product-engineer-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "./public",
+      "./client"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/IsaacAderogba/product-engineer-test/issues"
+  },
+  "homepage": "https://github.com/IsaacAderogba/product-engineer-test#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8",
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.2"
+  }
+}
