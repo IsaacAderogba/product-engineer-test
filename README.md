@@ -70,13 +70,3 @@ From root folder
     $ npm run test-client // tests client in interactive mode
     $ npm run test // tests server and client using concurrently
     $ npm run dev // starts server and client using concurrently
-
-## Dependencies
-
-cors
-dotenv
-express
-express-graphql
-graphql
-jest
-concurrently
