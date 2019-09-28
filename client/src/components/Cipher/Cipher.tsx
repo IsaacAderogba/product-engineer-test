@@ -19,6 +19,7 @@ const Cipher = () => {
 
   const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(cipherInput)
   };
 
   return (

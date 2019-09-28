@@ -1,5 +1,5 @@
 // modules
-import React from "react";
+import React, { Dispatch } from "react";
 import styled from "styled-components";
 
 // components
@@ -10,10 +10,19 @@ import { ButtonSecondary } from "../../~reusables/atoms/Button";
 import { offWhite } from "../../~reusables/variables/colors";
 import { medium_space_1 } from "../../~reusables/variables/spacing";
 
-const CipherInput = () => {
+interface OwnProps {
+  setCipherInput(input: string): Dispatch<React.SetStateAction<string>> | void;
+  cipherInput: string;
+}
+
+const CipherInput = (props: OwnProps) => {
+  const { cipherInput, setCipherInput } = props;
+
   return (
     <StyledCInput>
       <Input
+        value={cipherInput}
+        onChange={e => setCipherInput(e.target.value)}
         placeholder="Code to deciper"
         background="rgba(247, 248, 248, 0.3)"
         color={offWhite}
