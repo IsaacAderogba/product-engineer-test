@@ -51,9 +51,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser. S
 
 ### Running the tests
 
-Execute command from root folder. Runs testing for both the server and the client
+Execute command from root folder. First script runs testing for both the server and the client
 
     $ npm run test
+    $ npm run test-server
+    $ npm run test-client
 
 ### Deployment / Build For Production
 
