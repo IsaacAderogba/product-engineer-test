@@ -26,6 +26,7 @@ const CipherInput = (props: OwnProps) => {
         placeholder="Code to deciper"
         background="rgba(247, 248, 248, 0.3)"
         color={offWhite}
+        required
       />
       <ButtonSecondary>Decode</ButtonSecondary>
     </StyledCInput>

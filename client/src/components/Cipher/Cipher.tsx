@@ -14,12 +14,17 @@ import { decodeCipherQuery, CipherType } from "../../queries/cipher";
 import { primaryGradient } from "../../~reusables/variables/colors";
 
 const Cipher = () => {
-  const [cipherInput, setCipherInput] = useState("");
-  const [decodeCipher, { loading, data, error }] = useLazyQuery<CipherType>(decodeCipherQuery);
+  const priorInput = JSON.parse(String(localStorage.getItem("cipherInput")));
+
+  const [cipherInput, setCipherInput] = useState(priorInput ? priorInput : "");
+  const [decodeCipher, { loading, data, error }] = useLazyQuery<CipherType>(
+    decodeCipherQuery
+  );
 
   const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     decodeCipher({ variables: { cipher: cipherInput } });
+    localStorage.setItem("cipherInput", JSON.stringify(cipherInput));
   };
 
   return (
